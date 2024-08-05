@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<feed xmlns="http://www.w3.org/2005/Atom"> <title>Learning Lisp!</title> <link href="https://jacobis9000.github.io/"/> <link type="application/atom+xml" rel="self" href="https://jacobis9000.github.io//atom.xml"/> <updated>Mon, 05 Aug 2024 18:35:59 +0100</updated> <author> <name>Joseph Ashford</name> </author> <entry> <link type="text/html" rel="alternate" href="https://jacobis9000.github.io//posts/2024-08-05.html"/> <title>2024-08-05</title> <published>2024-08-05 14:53:44</published> <updated>2024-08-05 14:53:44</updated> <author> <name>Joseph Ashford</name> <uri>https://jacobis9000.github.io/</uri> </author> <content type="html">&lt;!-- **** your post here (remove this line) **** --&gt;
+
+&lt;!-- format: could be &#039;html&#039; (for raw html) or &#039;md&#039; (for markdown).  --&gt;
+
+&lt;h1&gt;Learning Lisp: A New Programmer&#039;s Perspective&lt;/h1&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&amp;quot;Each atom of that stone, each mineral flake of that night-filled mountain,
+in itself, forms a world. The struggle itself toward the heights is enough
+to fill a man&#039;s heart. One must imagine Sisyphus happy.&amp;quot; -- Albert Camus&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;This quote of Albert Camus from his work on the absurdity of existence expresses something of my journey with Common Lisp.  Common Lisp is absurd.  It is an ancient language by the standards of programming, yet more modern than anything available in the lineage of C.  It is a simple language in some respects which can become infinitely more complex, because it is infinitely extensible and modifiable to your needs.  It has taken me two years of (on-and-off) learning Lisp to realise something about Lisp: it&#039;s not a language, it&#039;s a meta-language. It can become any language you like, and it can enable any paradigm, or combinations of paradigms you like. But what was it that Camus captured of my journey?&lt;/p&gt;
+
+&lt;p&gt;My friends think I am ridiculous, in that I chose to learn to program with no purpose or aim in mind, no end-goal, no programming career I coveted nor anything, really, outside of the challenge itself.  This is what Camus means when he says we must imagine Sisyphus happy. Sisyphus, who must push the boulder to the top of the mount only to have it fall again, finds purpose in nothing more than his struggle. That&#039;s me!&lt;/p&gt;
+
+&lt;p&gt;So I began with CS50x the programming course by Harvard, and learnt C and Python with varying degrees of success. I preferred C to Python. In fact, I struggled with Python so much, because it is determined to force you to think in a certain way, and I was unwilling to bend to its will.  And also: whitespace. And also: overloaded operators.  And also: well, I just didn&#039;t like everything about it. It seemed no improvement on C and much worse really, and I couldn&#039;t believe that it was touted as a &amp;quot;modern&amp;quot; and &amp;quot;accessible&amp;quot; language. Python wasn&#039;t for me, at that time, anyway.&lt;/p&gt;
+
+&lt;p&gt;It&#039;s maybe because I grew up coding in MUSHcode. Not many people have heard of MUSHcode, but it&#039;s a programming language designed for text-based programming games called MUSHes, which stands for Multi-User Shared Hallucinations.  Our MUSH was graphical, though, with 16-bit IBM CP437 Extended Character Set graphics. Really, it pushed the envelope of what a MUSH is capable of doing, and I hold that it is the best MUSH ever made.  Now MUSHcode has been, by some, compared to Lisp, and in some ways the comparison holds. Like Lisp, data is usually a list (but the form the list takes is a string, because of course, it&#039;s a language for text-based games.) There&#039;s functions like &lt;strong&gt;dolist&lt;/strong&gt;. You nest functions, nest and nest and nest.  And there&#039;s brackets (parentheses.) Lots and lots of brackets. Round brackets and square brackets too.&lt;/p&gt;
+
+&lt;p&gt;So brackets didn&#039;t intimidate me.&lt;/p&gt;
+
+&lt;p&gt;It was on the basis that Lisp was similar to MUSHcode that I decided to try Lisp. Lisp was a revelation, coming from C and Python. It worked like I expected a programming language to work. It was natural, intuitive, sensible and sane. It was a dream coming from C and Python. Everything in Lisp has a return value, and code is data and data is code. So you plug functions into functions, and get results! Just like MUSHcode, but a real programming language (sorry MUSHcode.)&lt;/p&gt;
+
+&lt;p&gt;So suddenly my Sisyphean struggle was not so much a struggle, but a joyful journey. Due to the vagaries of life I wasn&#039;t able to study Lisp constantly, work, family, etc. got in the way, and I have a lot of hobbies, too. But when I did I just had FUN! The REPL is an instant-feedback-loop, you test your code function by function, on the fly. There&#039;s no compiling, failing, trawling through pages of code. There&#039;s no confusion and misery for hours. I don&#039;t even know the full power of the debugger and usually just &amp;quot;Abort&amp;quot; but I find debugging in Lisp, compared to any other language I&#039;ve tried, a breeze.&lt;/p&gt;
+
+&lt;p&gt;Lisp is just fun, but it is also consistent and makes sense. I can&#039;t explain why here. I&#039;m no expert, and there&#039;s better people for that, but if you haven&#039;t tried it, try Lisp: it might just change your life.&lt;/p&gt;
+
+&lt;p&gt;So I&#039;ll upload to this blog bits of Lisp I find interesting, or stuff I&#039;m doing, or my thoughts about Lisp or programming generally. If you&#039;re interested in listening to the half-baked theories of a perpetual n00b, welcome to my blog :)&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;p&gt;Excerpt separator can also be extracted from content.
+Add &lt;code&gt;excerpt: &amp;lt;string&amp;gt;&lt;/code&gt; to the above metadata.
+Excerpt separator is &lt;code&gt;&amp;lt;!--more--&amp;gt;&lt;/code&gt; by default.&lt;/p&gt;
+</content> </entry> </feed>
