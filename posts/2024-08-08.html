@@ -74,7 +74,7 @@ Written on 2024-08-08 13:17:18 </div>
 <p>Exit Emacs and return to your bash prompt. Now we need to install SLIME. SLIME turns Emacs into an IDE, with a live REPL into which you can plug code, and have the Lisp image return the evaluated results. This is very simple:</p>
 
 <blockquote>
-<p>sbcl --eval &quot;(ql:quickload :quicklisp-slime-helper)&quot; --quit</p>
+<p><code>sbcl --eval &quot;(ql:quickload :quicklisp-slime-helper)&quot; --quit</code></p>
 </blockquote>
 
 <p>Then, add this to <code>~/.emacs.d/init.el</code> (you may instead find you have: <code>~/.emacs</code> in which case the same applies.) This will create the file &quot;slime-helper.el&quot; in your ~/.quicklisp directory which will install the SLIME REPL and turn Emacs into an IDE.</p>

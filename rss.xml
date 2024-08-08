@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"> <channel> <title>Learning Lisp!</title> <link>jacobis9000.github.io</link> <atom:link href="jacobis9000.github.io/rss.xml" rel="self" type="application/rss+xml" /> <language>en-us</language> <pubDate>Thu, 08 Aug 2024 14:33:18 +0100</pubDate> <item> <title>2024-08-08</title> <link>jacobis9000.github.io/posts/2024-08-08.html</link> <pubDate>2024-08-08 13:17:18</pubDate> <author>Joseph Ashford</author> <guid isPermaLink="true">jacobis9000.github.io/posts/2024-08-08.html</guid> <category><![CDATA[ lisp ]]></category> <description><![CDATA[ <!-- **** your post here (remove this line) **** -->
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"> <channel> <title>Learning Lisp!</title> <link>jacobis9000.github.io</link> <atom:link href="jacobis9000.github.io/rss.xml" rel="self" type="application/rss+xml" /> <language>en-us</language> <pubDate>Thu, 08 Aug 2024 14:45:21 +0100</pubDate> <item> <title>2024-08-08</title> <link>jacobis9000.github.io/posts/2024-08-08.html</link> <pubDate>2024-08-08 13:17:18</pubDate> <author>Joseph Ashford</author> <guid isPermaLink="true">jacobis9000.github.io/posts/2024-08-08.html</guid> <category><![CDATA[ lisp ]]></category> <description><![CDATA[ <!-- **** your post here (remove this line) **** -->
 
 <!-- format: could be 'html' (for raw html) or 'md' (for markdown).  -->
 
@@ -66,7 +66,7 @@
 <p>Exit Emacs and return to your bash prompt. Now we need to install SLIME. SLIME turns Emacs into an IDE, with a live REPL into which you can plug code, and have the Lisp image return the evaluated results. This is very simple:</p>
 
 <blockquote>
-<p>sbcl --eval &quot;(ql:quickload :quicklisp-slime-helper)&quot; --quit</p>
+<p><code>sbcl --eval &quot;(ql:quickload :quicklisp-slime-helper)&quot; --quit</code></p>
 </blockquote>
 
 <p>Then, add this to <code>~/.emacs.d/init.el</code> (you may instead find you have: <code>~/.emacs</code> in which case the same applies.) This will create the file &quot;slime-helper.el&quot; in your ~/.quicklisp directory which will install the SLIME REPL and turn Emacs into an IDE.</p>
