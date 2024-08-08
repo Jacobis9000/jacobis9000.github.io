@@ -80,8 +80,9 @@ Written on 2024-08-08 13:17:18 </div>
 <p>Then, add this to <code>~/.emacs.d/init.el</code> (you may instead find you have: <code>~/.emacs</code> in which case the same applies.) This will create the file &quot;slime-helper.el&quot; in your ~/.quicklisp directory which will install the SLIME REPL and turn Emacs into an IDE.</p>
 
 <blockquote>
-<p><code>(load (expand-file-name &quot;~/.quicklisp/slime-helper.el&quot;))</code>
-<code>(setq inferior-lisp-program &quot;sbcl&quot;)</code></p>
+<p><code>(load (expand-file-name &quot;~/.quicklisp/slime-helper.el&quot;))</code></p>
+
+<p><code>(setq inferior-lisp-program &quot;sbcl&quot;)</code></p>
 </blockquote>
 
 <p>Now run Emacs to test. In Emacs terminology, a capital M stands for the Meta key, which is usually the Alt key, and a capital C stands for Control, and is usually the CTRL key. So if we want you to type <code>Alt-X</code> we will say <code>M-x</code>. So now type into Emacs:</p>
