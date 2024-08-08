@@ -1,5 +1,125 @@
 <?xml version="1.0"?>
-<feed xmlns="http://www.w3.org/2005/Atom"> <title>Learning Lisp!</title> <link href="https://jacobis9000.github.io/"/> <link type="application/atom+xml" rel="self" href="https://jacobis9000.github.io//atom.xml"/> <updated>Mon, 05 Aug 2024 19:10:01 +0100</updated> <author> <name>Joseph Ashford</name> </author> <entry> <link type="text/html" rel="alternate" href="https://jacobis9000.github.io//posts/2024-08-05.html"/> <title>2024-08-05</title> <published>2024-08-05 14:53:44</published> <updated>2024-08-05 14:53:44</updated> <author> <name>Joseph Ashford</name> <uri>https://jacobis9000.github.io/</uri> </author> <content type="html">&lt;!-- **** your post here (remove this line) **** --&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"> <title>Learning Lisp!</title> <link href="jacobis9000.github.io"/> <link type="application/atom+xml" rel="self" href="jacobis9000.github.io/atom.xml"/> <updated>Thu, 08 Aug 2024 14:33:18 +0100</updated> <author> <name>Joseph Ashford</name> </author> <entry> <link type="text/html" rel="alternate" href="jacobis9000.github.io/posts/2024-08-08.html"/> <title>2024-08-08</title> <published>2024-08-08 13:17:18</published> <updated>2024-08-08 13:17:18</updated> <author> <name>Joseph Ashford</name> <uri>jacobis9000.github.io</uri> </author> <content type="html">&lt;!-- **** your post here (remove this line) **** --&gt;
+
+&lt;!-- format: could be &#039;html&#039; (for raw html) or &#039;md&#039; (for markdown).  --&gt;
+
+&lt;h1&gt;Setting up your Lisp IDE&lt;/h1&gt;
+
+&lt;p&gt;This is a guide to setting up your LISP IDE using Emacs as your editor, SBCL as your compiler, slime as your REPL/IDE, Quicklisp as your package manager and Ultralisp as your package manager distribution, which has all the latest releases.&lt;/p&gt;
+
+&lt;p&gt;It is drawn from various guides, but the main one is at &lt;a href=&quot;https://lisp-lang.org/learn/getting-started/&quot; &gt;Lisp-Lang.org&lt;/a&gt; and this guide will get you going without Ultralisp for the latest releases of packages, however Ultralisp is useful if for example you&#039;re interested in Web or GUI development and want the latest version of the CLOG Builder IDE, which is only available through Ultralisp. For more on CLOG and some great Lisp guides: &lt;a href=&quot;https://github.com/rabibotton/clog&quot; &gt;CLOG&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;While this is a guide for Ubuntu, it is similar on Mac and other UNIX flavours except your package manager may be different, e.g. homebrew on MacOS.&lt;/p&gt;
+
+&lt;p&gt;The first step is to install SBCL, the high-performance Lisp compiler, which is very simple:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;sudo apt install sbcl&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Next we install Quicklisp, the Package Manager, placing the downloaded installation file in &lt;code&gt;/tmp/ql.lisp&lt;/code&gt; and then using SBCL to install:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;curl -o /tmp/ql.lisp http://beta.quicklisp.org/quicklisp.lisp&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Then we use SBCL to install Quicklisp. My instructions here differ from lisp-lang.org because I find it easier to install Quicklisp from within SBCL:&lt;/p&gt;
+
+&lt;p&gt;First:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;sbcl --no-sysinit --no-userinit --load /tmp/ql.lisp&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Then press return. Then you will be inside SBCL, and will receive some instructions. Enter this command, which is in Common Lisp code, into SBCL to install Quicklisp into the ~/.quicklisp directory:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;(quicklisp-quick-start:install :path &amp;quot;~/.quicklisp&amp;quot;)&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Once done, there is one more command to run, to add necessary lines to your SBCL init file:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;(ql:add-to-init-file)&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;And then, to exit SBCL:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;(exit)&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;You should now be back at your bash prompt. The next step is to install Emacs with the following command:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;sudo apt install emacs&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;After installing, from your terminal run:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;emacs&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;And the GUI Emacs editor should pop up. (At this point, you can customise Emacs if you like, go to &lt;code&gt;Options &amp;gt; Customize Emacs&lt;/code&gt; and select your theme. I like tango-dark. Then at the top of that page, &lt;code&gt;Save Theme Settings&lt;/code&gt;, exit Emacs, and your theme should be saved.)&lt;/p&gt;
+
+&lt;p&gt;Exit Emacs and return to your bash prompt. Now we need to install SLIME. SLIME turns Emacs into an IDE, with a live REPL into which you can plug code, and have the Lisp image return the evaluated results. This is very simple:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;sbcl --eval &amp;quot;(ql:quickload :quicklisp-slime-helper)&amp;quot; --quit&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Then, add this to &lt;code&gt;~/.emacs.d/init.el&lt;/code&gt; (you may instead find you have: &lt;code&gt;~/.emacs&lt;/code&gt; in which case the same applies.) This will create the file &amp;quot;slime-helper.el&amp;quot; in your ~/.quicklisp directory which will install the SLIME REPL and turn Emacs into an IDE.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;(load (expand-file-name &amp;quot;~/.quicklisp/slime-helper.el&amp;quot;))&lt;/code&gt;
+&lt;code&gt;(setq inferior-lisp-program &amp;quot;sbcl&amp;quot;)&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Now run Emacs to test. In Emacs terminology, a capital M stands for the Meta key, which is usually the Alt key, and a capital C stands for Control, and is usually the CTRL key. So if we want you to type &lt;code&gt;Alt-X&lt;/code&gt; we will say &lt;code&gt;M-x&lt;/code&gt;. So now type into Emacs:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;M-x slime&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;The SLIME REPL should open in the bottom pane of Emacs. At this point, you are set up and good to go, and can begin entering code into the REPL for evaluation, or download Quicklisp packages via &lt;code&gt;(ql:quickload :package)&lt;/code&gt;. More information at: &lt;a href=&quot;https://www.quicklisp.org/beta/&quot; &gt;Quicklisp Beta&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;However, we want the most up-to-date packages! So we will install Ultralisp, a distribution for Quicklisp Package Manager with more up-to-date packages.&lt;/p&gt;
+
+&lt;p&gt;In the SLIME REPL type:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;(ql-dist:install-dist &amp;quot;http://dist.ultralisp.org/&amp;quot; :prompt nil)&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;This may be all you need to do. However if you encounter issues installing packages (such as package installations hanging on an error) then this will resolve it. Remember slime-helper.el file we installed earlier? Go to &lt;code&gt;~/.quicklisp/&lt;/code&gt; and edit &lt;code&gt;slime-helper.el&lt;/code&gt;. Under the comments (noted by ;;;;) where it introduces the file, should be these two lines:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;(unless (boundp &#039;quicklisp-slime-helper-dist)&lt;/code&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;(setq quicklisp-slime-helper-dist &amp;quot;quicklisp&amp;quot;))&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Edit the second line so that &amp;quot;quicklisp&amp;quot; now reads &amp;quot;ultralisp&amp;quot; like so:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;(setq quicklisp-slime-helper-dist &amp;quot;ultralisp&amp;quot;))&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;And save the file. (Type &lt;code&gt;C-x s&lt;/code&gt; if you&#039;re editing in Emacs.) Now restart Emacs and SLIME, and download your package.&lt;/p&gt;
+
+&lt;p&gt;I hope you found this guide useful. If you have any issues setting up your Lisp IDE, the folks at the Lisp Discord, Lisp IRC, or r/Lisp will be happy to help. Check out the communities at &lt;a href=&quot;https://lisp-lang.org/community/&quot; &gt;Lisp-Lang Communities&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Thanks for reading, and happy hacking!&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;p&gt;Excerpt separator can also be extracted from content.
+Add &lt;code&gt;excerpt: &amp;lt;string&amp;gt;&lt;/code&gt; to the above metadata.
+Excerpt separator is &lt;code&gt;&amp;lt;!--more--&amp;gt;&lt;/code&gt; by default.&lt;/p&gt;
+</content> </entry><entry> <link type="text/html" rel="alternate" href="jacobis9000.github.io/posts/2024-08-05.html"/> <title>2024-08-05</title> <published>2024-08-05 14:53:44</published> <updated>2024-08-05 14:53:44</updated> <author> <name>Joseph Ashford</name> <uri>jacobis9000.github.io</uri> </author> <content type="html">&lt;!-- **** your post here (remove this line) **** --&gt;
 
 &lt;!-- format: could be &#039;html&#039; (for raw html) or &#039;md&#039; (for markdown).  --&gt;
 
